@@ -1,0 +1,8 @@
+<div>
+  <label >name: </label><input type="text" #myNameInputText>
+  <button type="button" (click)="searchBookList(myNameInputText.value)">ค้นหา</button>
+
+</div>
+<div *ngFor="let book of bookList">
+  {{book.isbn}} {{book.name}}
+</div>

@@ -1,0 +1,70 @@
+<div class="container" [ngSwitch]="content">
+    <div class="bodyContent" *ngSwitchCase="'Login'">
+      <div class="headerSelect">
+        <div class="textContent">
+          Login
+        </div>
+        <div class="btnSelect" >
+          <button class="selectLogSig activeLog" type="button" (click)="changeForm('Login')" >Login</button>
+          <button class="selectLogSig" type="button" (click)="changeForm('Signup')">Sign up</button>
+        </div>
+      </div>
+      <form action="">
+        <div class="inputEmail">
+            <p>
+              Email
+            </p>
+            <div style="user-select: none;">
+              <input type="text" placeholder="Email...">
+            </div>
+        </div>
+        <div class="inputPassword">
+          <p>
+            Password
+          </p>
+          <input type="text" placeholder="Password...">
+          <a href="">Forgot password?</a>
+        </div>
+        <div class="inputSubmit">
+            <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="bodyContent" *ngSwitchCase="'Signup'">
+      <div class="headerSelect">
+        <div class="textContent">
+          Sign up
+        </div>
+        <div class="btnSelect">
+          <button class="selectLogSig" type="button" (click)="changeForm('Login')">Login</button>
+          <button class="selectLogSig activeLog" type="button" (click)="changeForm('Signup')">Sign up</button>
+        </div>
+      </div>
+      <form action="">
+        <div class="inputEmail">
+            <p>
+              Email
+            </p>
+            <input type="text" placeholder="Email...">
+        </div>
+
+        <div class="inputEmail">
+            <p>
+              Confirm your email
+            </p>
+            <input type="text" placeholder="Confirm your email">
+        </div>
+
+        <div class="inputPassword">
+          <p>
+            Password
+          </p>
+          <input type="text" placeholder="Password...">
+        </div>
+        <div class="inputSubmit">
+            <button type="submit">Sign up</button>
+        </div>
+      </form>
+    </div>
+</div>

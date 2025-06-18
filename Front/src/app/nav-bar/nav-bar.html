@@ -1,0 +1,99 @@
+<div style="min-width: 940px; background-color: rgb(23, 29, 37);">
+
+
+  <div class="container">
+    <div class="navigation">
+      <div class="btn-dropdown" (mouseenter)="hover=1" (mouseleave)="hover=0">
+        <a class="paddA " routerLink="store" [routerLinkActive]="['active']"
+        [class.hover]="hover===1">Store</a>
+        <div class="submenuDropdown" *ngIf="hover===1">
+          <a href="">Feature</a>
+          <a href="">Whitelist</a>
+        </div>
+      </div>
+
+      <div class="btn-dropdown"
+      (mouseenter)="hover=2" (mouseleave)="hover=0" >
+        <a  class="paddA" routerLink="library" [routerLinkActive]="['active']"
+        [class.hover]="hover===2">Library</a>
+        <div class="submenuDropdown" *ngIf="hover===2">
+          <a href="">Home</a>
+          <a href="">Collection</a>
+        </div>
+      </div>
+
+      <div class="btn-dropdown"
+      (mouseenter)="hover=3" (mouseleave)="hover=0" >
+        <a  class="paddA" routerLink="community" [routerLinkActive]="['active']"
+        [class.hover]="hover===3">Community</a>
+        <div class="submenuDropdown" *ngIf="hover===3">
+          <a href="">Home</a>
+          <a href="">Workshop</a>
+          <a href="">Discussion</a>
+        </div>
+      </div>
+
+      <div class="btn-dropdown" (mouseenter)="hover=4" (mouseleave)="hover=0">
+        <a class="paddA" routerLink="account" [routerLinkActive]="['active']"
+        [class.hover]="hover===4">Account</a>
+        <div class="submenuDropdown" *ngIf="hover===4">
+          <a href="">Profile</a>
+          <a href="">Friends</a>
+          <a href="">Groups</a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="other">
+      <a routerLink="about" class="notif abUs" >about us</a>
+
+      <div  (click)="toggleDropdown('otherDropdown1' , $event)">
+          <div class="notif">
+            <i class="pi pi-bell"></i>
+          </div>
+
+          <div class="notifContent" >
+            <div class="borderHighlight"
+            [ngStyle]="{display:activeDropdownId === 'otherDropdown1'? 'block' : 'none'}"
+            #otherDropdown1>
+
+              <div class="headerNoti">
+                <p>Notification</p>
+                <div class="linkButton">
+                  <button type="button">View All</button>
+                  <!-- <a href="" > View All</a> -->
+                </div>
+              </div>
+
+              <div class="bodyNoti" >
+                <a  href="" class="descNoti" *ngFor="let game of Allnoti">
+                    {{game.gameName}}     {{game.gameId}}
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+      </div>
+
+      <div class="profileName" (click)="toggleDropdown('otherDropdown2',$event)">
+        <button class="pro" type="button">
+          <img src="" alt="">  รูปโปรไฟล์  {{accountName}}
+        </button>
+        <div class="profileDropdown"
+        [ngStyle]="{display:activeDropdownId === 'otherDropdown2'? 'flex' : 'none'}"
+        #otherDropdown2
+        >
+          <a routerLink="account">Profile: {{accountName}}</a>
+          <a routerLink="login">Sign Out</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

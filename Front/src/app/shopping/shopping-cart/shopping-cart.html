@@ -1,0 +1,5 @@
+<div class="shopping-cart-container" [class.clickable]="value>0">
+  <i class="pi pi-shopping-cart" style="font-size: 2rem;"></i>
+  <div *ngIf="value>0" class="notification">{{value}} </div>
+</div>
+

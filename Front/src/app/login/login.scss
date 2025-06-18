@@ -1,0 +1,111 @@
+.container{
+  margin: 0 auto;
+  position: relative;
+  padding-top: 3%;
+  width: 100%;
+  height: 100%;
+}
+
+.bodyContent{
+  margin: 10px auto;
+  border: 1px solid black;
+  background-color: rgb(253, 242, 221);
+  padding: 5px;
+  border-radius: 10px;
+  width: 500px;
+  height: fit-content;
+  position: relative;
+  font-size: 20px;
+}
+
+.headerSelect{
+  margin: 20px auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  /* column-gap: 3rem; */
+  justify-content: center;
+}
+
+.textContent{
+  width: 100px;
+  margin: 0px auto;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.btnSelect{
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+}
+
+.btnSelect button{
+  border-radius: 5px;
+  border: 1px solid grey;
+  transition: all 0.1s ease;
+}
+
+.btnSelect button:hover:not(.activeLog){
+  background-color: rgb(80, 185, 227);
+  color: inherit;
+  transform: scale(1.05);
+}
+
+.btnSelect button:active:not(.activeLog){
+  background-color: rgb(80, 163, 227);
+  color: inherit;
+  transform: scale(0.9);
+}
+
+
+
+.activeLog{
+  color: rgb(255, 255, 255);
+  background-color: rgb(21, 102, 163);
+}
+
+.selectLogSig {
+    width: 150px;
+    height: 40px;
+}
+
+.inputEmail ,.inputPassword{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.inputEmail p, .inputPassword p {
+  margin: 10px 0 5px 0;
+}
+
+.inputPassword p{
+  margin-top: 15px;
+}
+
+.inputEmail input , .inputPassword input{
+  margin: 5px 0 8px 0;
+  padding: 5px 8px;
+  width: 280px;
+}
+
+.inputSubmit{
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: max-content;
+}
+
+.inputSubmit button{
+  margin-top: 20px ;
+  width: 200px;
+  height: 40px;
+}
+
+.forgotPass{
+  width: 300px;
+  margin: 15px auto;
+}
+
+.forgotPass a{
+  color: black;
+}
